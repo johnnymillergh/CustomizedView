@@ -8,7 +8,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
 public class InvalidTextView extends AppCompatTextView {
-    Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public InvalidTextView(Context context) {
         super(context);
