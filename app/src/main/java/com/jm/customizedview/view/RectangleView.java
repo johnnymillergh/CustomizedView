@@ -41,9 +41,13 @@ public class RectangleView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        int width = getWidth();
-        int height = getHeight();
+        int paddingLeft = getPaddingLeft();
+        int paddingRight = getPaddingRight();
+        int paddingTop = getPaddingTop();
+        int paddingBottom = getPaddingBottom();
 
-        canvas.drawRect(0, 0, width, height, paint);
+        int width = getWidth() - paddingLeft - paddingRight;
+        int height = getHeight() - paddingTop - paddingBottom;
+        canvas.drawRect(0 + paddingLeft, 0 + paddingTop, width + paddingRight, height + paddingBottom, paint);
     }
 }
